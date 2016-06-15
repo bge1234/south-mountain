@@ -7,8 +7,8 @@ var knex = require('../db/knex');
 // - Auto-load from Strava using AJAX.
 
 router.get('/', function(req, res, next) {
-  knex('rides').select().then(function(results) {
-      res.render('index', { rides: results});
+  knex('rides').select().orderBy('id', 'desc').then(function(results) {
+      res.render('index', {rides: results});
   });
 });
 

@@ -1,8 +1,15 @@
 extends layout
 
 block content
-  p I have climbed South Mountain by bike #{rides.length} times!
+  p I have climbed Phoenix's South Mountain by bike #{rides.length} times!
+  br
+  a(href="/rides/new") Add ride
+  br
   ul
     for ride in rides
       li
         a(href="#{ride.url}") #{ride.date}
+        |  | 
+        a(href="/rides/#{ride.id}/edit") Edit
+        |  | 
+        a(href="/rides/#{ride.id}/delete") Delete

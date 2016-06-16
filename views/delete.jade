@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+  div.container
+    if ride
+      p Delete ride from #{ride.date}. Are you sure?
+      form(action='/rides/#{ride.id}/delete' method='POST')
+        input(type='submit' value='Yes')
+      br
+      form(action='/rides' method='GET')
+        input(type='submit' value='No')

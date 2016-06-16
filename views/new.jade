@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  div.container
+    p Add ride
+    form(action="/rides" method="post")
+      label(for="date") Date: 
+      input(type="text" name="date" placeholder="Date")
+      br
+      br
+      label(for="url") URL: 
+      input(type="text" name="url" placeholder="URL")
+      br
+      br
+      button(type="submit") Add

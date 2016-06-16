@@ -8,6 +8,13 @@ block content
       form(action="/rides/#{ride.id}" method="post")
         label(for="date") Date: 
         input(type="text" name="date" value= ride.date placeholder="Date")
+        br
+        br
         label(for="url") URL
         input(type="text" name="url" value= ride.url placeholder="URL")
+        br
+        br
         button(type="submit") Update
+      br
+      form(action='/rides' method='GET')
+        input(type='submit' value='Cancel')
